@@ -42,7 +42,7 @@
                         ]
                     },
                     {
-                        "description": "Change fn + d to delete_forward.",
+                        "description": "Change fn + d to delete_or_backspace.",
                         "manipulators": [
                             {
                                 "from": {
@@ -82,7 +82,43 @@
                                 "type": "basic"
                             }
                         ]
-                    }
+                    },
+                    {
+                        "description": "Change fn + e to delete_or_backspace.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": { "mandatory": [ "fn" ] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": [ "option" ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change fn + r to opt + delete_forward.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": [ "fn" ] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_forward",
+                                        "modifiers": [ "option" ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    } 
                 ]
             },
             "devices": [],
