@@ -19,6 +19,12 @@
                         "description": "Change command + L to ctrl + command + Q",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [ "^com\\.parallels\\.winapp\\." ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": { "mandatory": [ "left_command" ] }
@@ -32,11 +38,16 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
+                    },{
                         "description": "Change spacebar to fn. (Post spacebar if pressed alone)",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [ "^com\\.parallels\\.winapp\\." ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {
@@ -58,9 +69,8 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "Change fn + d to delete_or_backspace.",
+                    }, {
+                        "description": "Change fn + d/f/e/r to delete_or_backspace/delete_forward.",
                         "manipulators": [
                             {
                                 "from": {
@@ -77,13 +87,7 @@
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change fn + f to delete_forward.",
-                        "manipulators": [
-                            {
+                            },{
                                 "from": {
                                     "key_code": "f",
                                     "modifiers": {
@@ -98,13 +102,7 @@
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change fn + e to opt + delete_or_backspace.",
-                        "manipulators": [
-                            {
+                            },{
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": { "mandatory": [ "fn" ] }
@@ -116,13 +114,7 @@
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change fn + r to opt + delete_forward.",
-                        "manipulators": [
-                            {
+                            },{
                                 "from": {
                                     "key_code": "r",
                                     "modifiers": { "mandatory": [ "fn" ] }
@@ -134,13 +126,7 @@
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change fn + shift + e to right_command + delete_or_backspace.",
-                        "manipulators": [
-                            {
+                            },{
                                 "from": {
                                     "key_code": "e",
                                     "modifiers": { "mandatory": [ "fn", "shift" ] }
@@ -152,13 +138,7 @@
                                     }
                                 ],
                                 "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change fn + shift + r to right_command + delete_forward.",
-                        "manipulators": [
-                            {
+                            },{
                                 "from": {
                                     "key_code": "r",
                                     "modifiers": { "mandatory": [ "fn", "shift" ] }
