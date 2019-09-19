@@ -16,6 +16,24 @@
                 },
                 "rules": [
                     {
+                        "description": "Change command + L to ctrl + command + Q",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": { "mandatory": [ "left_command" ] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "q",
+                                        "modifiers": [ "left_control", "left_command" ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Change spacebar to fn. (Post spacebar if pressed alone)",
                         "manipulators": [
                             {
