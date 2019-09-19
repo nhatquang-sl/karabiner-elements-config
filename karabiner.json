@@ -84,7 +84,7 @@
                         ]
                     },
                     {
-                        "description": "Change fn + e to delete_or_backspace.",
+                        "description": "Change fn + e to opt + delete_or_backspace.",
                         "manipulators": [
                             {
                                 "from": {
@@ -118,7 +118,43 @@
                                 "type": "basic"
                             }
                         ]
-                    } 
+                    },
+                    {
+                        "description": "Change fn + shift + e to right_command + delete_or_backspace.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "e",
+                                    "modifiers": { "mandatory": [ "fn", "shift" ] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_or_backspace",
+                                        "modifiers": [ "right_command" ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Change fn + shift + r to right_command + delete_forward.",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": [ "fn", "shift" ] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "delete_forward",
+                                        "modifiers": [ "right_command" ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
                 ]
             },
             "devices": [],
