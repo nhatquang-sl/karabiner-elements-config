@@ -22,7 +22,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.parallels\\.winapp\\."
+                                            "com.parallels.desktop.console"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -55,7 +55,7 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "^com\\.parallels\\.winapp\\."
+                                            "com.parallels.desktop.console"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
