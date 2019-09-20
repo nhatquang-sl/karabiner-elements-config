@@ -17,16 +17,16 @@
                 "rules": [
                     {
                         "description": "Change command + L to ctrl + command + Q",
+                        "conditions": [
+                            {
+                                "bundle_identifiers": [
+                                    "com.parallels.desktop.console"
+                                ],
+                                "type": "frontmost_application_unless"
+                            }
+                        ],
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.parallels.desktop.console"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": {
@@ -50,16 +50,16 @@
                     },
                     {
                         "description": "Change spacebar to fn. (Post spacebar if pressed alone)",
+                        "conditions": [
+                            {
+                                "bundle_identifiers": [
+                                    "com.parallels.desktop.console"
+                                ],
+                                "type": "frontmost_application_unless"
+                            }
+                        ],
                         "manipulators": [
                             {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "com.parallels.desktop.console"
-                                        ],
-                                        "type": "frontmost_application_unless"
-                                    }
-                                ],
                                 "from": {
                                     "key_code": "spacebar",
                                     "modifiers": {
@@ -441,7 +441,9 @@
                                 "to": [
                                     {
                                         "key_code": "c",
-                                        "modifiers":["right_command"]
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -458,7 +460,9 @@
                                 "to": [
                                     {
                                         "key_code": "v",
-                                        "modifiers":["right_command"]
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -475,7 +479,9 @@
                                 "to": [
                                     {
                                         "key_code": "z",
-                                        "modifiers":["right_command"]
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -492,7 +498,9 @@
                                 "to": [
                                     {
                                         "key_code": "x",
-                                        "modifiers":["right_command"]
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -509,7 +517,9 @@
                                 "to": [
                                     {
                                         "key_code": "b",
-                                        "modifiers":["right_command"]
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -526,7 +536,9 @@
                                 "to": [
                                     {
                                         "key_code": "s",
-                                        "modifiers":["right_command"]
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
@@ -543,7 +555,9 @@
                                 "to": [
                                     {
                                         "key_code": "a",
-                                        "modifiers":["right_command"]
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
                                     }
                                 ],
                                 "type": "basic"
