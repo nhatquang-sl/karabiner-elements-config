@@ -16,39 +16,6 @@
                 },
                 "rules": [
                     {
-                        "description": "Change command + L to ctrl + command + Q",
-                        "conditions": [
-                            {
-                                "bundle_identifiers": [
-                                    "com.parallels.desktop.console"
-                                ],
-                                "type": "frontmost_application_unless"
-                            }
-                        ],
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_command"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "q",
-                                        "modifiers": [
-                                            "left_control",
-                                            "left_command"
-                                        ]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Change spacebar to fn. (Post spacebar if pressed alone)",
                         "conditions": [
                             {
@@ -594,7 +561,7 @@
                         ]
                     },
                     {
-                        "description": "Change ctrl + f/s/a/z/x/c/v/b/n/t/r to open terminal",
+                        "description": "Change ctrl + f/s/a/z/x/c/v/b/n/t/r/l to open terminal",
                         "conditions": [
                             {
                                 "bundle_identifiers": [
@@ -675,6 +642,27 @@
                                         "key_code": "f",
                                         "modifiers": [
                                             "right_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f",
+                                        "modifiers": [
+                                            "right_command",
+                                            "right_shift"
                                         ]
                                     }
                                 ],
@@ -834,6 +822,27 @@
                             },
                             {
                                 "from": {
+                                    "key_code": "n",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control",
+                                            "shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "n",
+                                        "modifiers": [
+                                            "right_command",
+                                            "right_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
                                     "key_code": "i",
                                     "modifiers": {
                                         "mandatory": [
@@ -844,6 +853,63 @@
                                 "to": [
                                     {
                                         "key_code": "i",
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "l",
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "w",
+                                        "modifiers": [
+                                            "right_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "t",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "control"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "t",
                                         "modifiers": [
                                             "right_command"
                                         ]
