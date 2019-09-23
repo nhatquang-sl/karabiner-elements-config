@@ -225,7 +225,7 @@
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": ",",
+                        "key_code": "comma",
                         "modifiers": {
                             "optional": [
                                 "any"
@@ -234,7 +234,7 @@
                     },
                     "to": [
                         {
-                            "key_code": ",",
+                            "key_code": "comma",
                             "modifiers": [
                                 "left_command"
                             ]
@@ -251,7 +251,7 @@
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": ".",
+                        "key_code": "period",
                         "modifiers": {
                             "optional": [
                                 "any"
@@ -260,7 +260,7 @@
                     },
                     "to": [
                         {
-                            "key_code": ".",
+                            "key_code": "period",
                             "modifiers": [
                                 "left_command"
                             ]
