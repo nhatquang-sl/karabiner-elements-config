@@ -2,8 +2,29 @@
     "title": "SpaceFN Command",
     "rules": [
         {
-            "description": "SpaceFN Command: Space+[t, a, z, x, c, v, b, m, ','] to Command",
+            "description": "SpaceFN Command: Space+[q, t, a, z, x, c, v, b, m, ','] to Command",
             "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "q"
+                    },
+                    "to": [
+                        {
+                            "key_code": "q",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "spacefn_mode",
+                            "value": 1
+                        }
+                    ]
+                },
                 {
                     "type": "basic",
                     "from": {
@@ -12,11 +33,9 @@
                     "to": [
                         {
                             "key_code": "t",
-                            "modifiers": {
-                                "mandatory": [
-                                    "left_command"
-                                ]
-                            }
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ],
                     "conditions": [
@@ -35,11 +54,9 @@
                     "to": [
                         {
                             "key_code": "a",
-                            "modifiers": {
-                                "mandatory": [
-                                    "left_command"
-                                ]
-                            }
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ],
                     "conditions": [
@@ -58,11 +75,9 @@
                     "to": [
                         {
                             "key_code": "z",
-                            "modifiers": {
-                                "mandatory": [
-                                    "left_command"
-                                ]
-                            }
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ],
                     "conditions": [
@@ -81,11 +96,9 @@
                     "to": [
                         {
                             "key_code": "x",
-                            "modifiers": {
-                                "mandatory": [
-                                    "left_command"
-                                ]
-                            }
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ],
                     "conditions": [
@@ -95,7 +108,8 @@
                             "value": 1
                         }
                     ]
-                },{
+                },
+                {
                     "type": "basic",
                     "from": {
                         "key_code": "c"
@@ -103,11 +117,9 @@
                     "to": [
                         {
                             "key_code": "c",
-                            "modifiers": {
-                                "mandatory": [
-                                    "left_command"
-                                ]
-                            }
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ],
                     "conditions": [
@@ -126,11 +138,9 @@
                     "to": [
                         {
                             "key_code": "v",
-                            "modifiers": {
-                                "mandatory": [
-                                    "left_command"
-                                ]
-                            }
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ],
                     "conditions": [
@@ -149,11 +159,9 @@
                     "to": [
                         {
                             "key_code": "b",
-                            "modifiers": {
-                                "mandatory": [
-                                    "left_command"
-                                ]
-                            }
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ],
                     "conditions": [
@@ -172,11 +180,9 @@
                     "to": [
                         {
                             "key_code": "m",
-                            "modifiers": {
-                                "mandatory": [
-                                    "left_command"
-                                ]
-                            }
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ],
                     "conditions": [
@@ -195,11 +201,9 @@
                     "to": [
                         {
                             "key_code": ",",
-                            "modifiers": {
-                                "mandatory": [
-                                    "left_command"
-                                ]
-                            }
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ],
                     "conditions": [
