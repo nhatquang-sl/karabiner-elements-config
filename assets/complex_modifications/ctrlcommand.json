@@ -257,6 +257,14 @@
                                 "left_command"
                             ]
                         }
+                    ],
+                    "conditions": [
+                        {
+                            "bundle_identifiers": [
+                                "com.google.Chrome"
+                            ],
+                            "type": "frontmost_application_if"
+                        }
                     ]
                 },
                 {
