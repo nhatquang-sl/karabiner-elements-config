@@ -2,43 +2,6 @@
     "title": "CtrlCommand",
     "rules": [
         {
-            "description": "CtrlCommand: Control enables CtrlCommand mode.",
-            "manipulators": [
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "left_control",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "set_variable": {
-                                "name": "ctrlcommand_mode",
-                                "value": 1
-                            }
-                        }
-                    ],
-                    "to_if_alone": [
-                        {
-                            "key_code": "left_control"
-                        }
-                    ],
-                    "to_after_key_up": [
-                        {
-                            "set_variable": {
-                                "name": "ctrlcommand_mode",
-                                "value": 0
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "description": "CtrlCommand: control + [z, x, c, v, b, n, m, ',', '.'] to Command",
             "manipulators": [
                 {
@@ -46,6 +9,9 @@
                     "from": {
                         "key_code": "z",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -58,19 +24,16 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
-                },{
+                },
+                {
                     "type": "basic",
                     "from": {
                         "key_code": "x",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -83,13 +46,6 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 },
                 {
@@ -97,6 +53,9 @@
                     "from": {
                         "key_code": "c",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -109,13 +68,6 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 },
                 {
@@ -123,6 +75,9 @@
                     "from": {
                         "key_code": "v",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -135,13 +90,6 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 },
                 {
@@ -149,6 +97,9 @@
                     "from": {
                         "key_code": "b",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -161,13 +112,6 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 },
                 {
@@ -175,6 +119,9 @@
                     "from": {
                         "key_code": "n",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -187,13 +134,6 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 },
                 {
@@ -201,6 +141,9 @@
                     "from": {
                         "key_code": "m",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -213,13 +156,6 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 },
                 {
@@ -227,6 +163,9 @@
                     "from": {
                         "key_code": "comma",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -242,9 +181,10 @@
                     ],
                     "conditions": [
                         {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
+                            "bundle_identifiers": [
+                                "com.parallels.desktop.console"
+                            ],
+                            "type": "frontmost_application_unless"
                         }
                     ]
                 },
@@ -253,6 +193,9 @@
                     "from": {
                         "key_code": "period",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -265,25 +208,21 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 }
             ]
         },
         {
-            "description": "CtrlCommand: control + [w, t, i, o, p] to Command + [w, t, i, o, p]",
+            "description": "CtrlCommand: control + [w, r, t, i, o, p] to Command + [w, r, t, i, o, p]",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
                         "key_code": "w",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -296,12 +235,27 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "r",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
                         {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
+                            "key_code": "r",
+                            "modifiers": [
+                                "left_command"
+                            ]
                         }
                     ]
                 },
@@ -310,6 +264,9 @@
                     "from": {
                         "key_code": "t",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -322,13 +279,6 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 },
                 {
@@ -336,6 +286,9 @@
                     "from": {
                         "key_code": "i",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -348,13 +301,6 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 },
                 {
@@ -362,6 +308,9 @@
                     "from": {
                         "key_code": "o",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -374,13 +323,6 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 },
                 {
@@ -388,6 +330,9 @@
                     "from": {
                         "key_code": "p",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -399,13 +344,6 @@
                             "modifiers": [
                                 "left_command"
                             ]
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
                         }
                     ]
                 }
@@ -419,6 +357,9 @@
                     "from": {
                         "key_code": "a",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -431,13 +372,6 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 },
                 {
@@ -445,6 +379,9 @@
                     "from": {
                         "key_code": "s",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -457,13 +394,6 @@
                                 "left_command"
                             ]
                         }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
                     ]
                 },
                 {
@@ -471,6 +401,9 @@
                     "from": {
                         "key_code": "f",
                         "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
                             "optional": [
                                 "any"
                             ]
@@ -486,31 +419,10 @@
                     ],
                     "conditions": [
                         {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "h"
-                    },
-                    "to": [
-                        {
-                            "key_code": "f",
-                            "modifiers": [
-                                "left_option",
-                                "left_command"
-                            ]
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
+                            "bundle_identifiers": [
+                                "com.parallels.desktop.console"
+                            ],
+                            "type": "frontmost_application_unless"
                         }
                     ]
                 },
@@ -520,10 +432,30 @@
                         "key_code": "h",
                         "modifiers": {
                             "mandatory": [
-                                "left_shift"
+                                "control"
                             ]
                         }
-
+                    },
+                    "to": [
+                        {
+                            "key_code": "f",
+                            "modifiers": [
+                                "left_option",
+                                "left_command"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "h",
+                        "modifiers": {
+                            "mandatory": [
+                                "control",
+                                "shift"
+                            ]
+                        }
                     },
                     "to": [
                         {
@@ -532,13 +464,6 @@
                                 "left_shift",
                                 "left_command"
                             ]
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "ctrlcommand_mode",
-                            "value": 1
                         }
                     ]
                 }
