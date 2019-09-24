@@ -350,7 +350,7 @@
             ]
         },
         {
-            "description": "CtrlCommand: control + [a, s, f, h] to Command + [a, s, f, h]",
+            "description": "CtrlCommand: control + [a, s, f, h, l] to Command + [a, s, f, h, l]",
             "manipulators": [
                 {
                     "type": "basic",
@@ -462,6 +462,28 @@
                             "key_code": "h",
                             "modifiers": [
                                 "left_shift",
+                                "left_command"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [
+                                "control"
+                            ],
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "l",
+                            "modifiers": [
                                 "left_command"
                             ]
                         }
