@@ -2,6 +2,32 @@
     "title": "SpaceFN Command",
     "rules": [
         {
+            "description": "SpaceFN Command: Space+[backquote] to Command",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "grave_accent_and_tilde"
+                    },
+                    "to": [
+                        {
+                            "key_code": "grave_accent_and_tilde",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "spacefn_mode",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "description": "SpaceFN Command: Space+[q, t, a, z, x, c, v, b, m, ','] to Command",
             "manipulators": [
                 {
